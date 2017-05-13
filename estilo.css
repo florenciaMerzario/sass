@@ -1,4 +1,289 @@
-h1 {
-  color: red; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.barraNav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #4972B5; }
+  .barraNav img {
+    width: 100px;
+    padding-left: 35px; }
+  .barraNav ul {
+    display: flex;
+    list-style: none;
+    padding-right: 35px;
+    margin-top: 5px; }
+    .barraNav ul li:hover ul {
+      opacity: 1;
+      transform: translateY(0%); }
+    .barraNav ul a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      padding: 8px; }
+      .barraNav ul a span {
+        padding-left: 5px;
+        transition: all 0.6s; }
+      .barraNav ul a:hover span {
+        transform: translateY(10px);
+        opacity: 0; }
+    .barraNav ul ul {
+      display: block;
+      position: absolute;
+      transform: translateX(60%);
+      opacity: 0;
+      padding: 5px;
+      transition: all 0.6s;
+      background-color: #4972B5; }
+      .barraNav ul ul li a {
+        color: white; }
+
+.formularioLogin {
+  background-color: #DEDEDE;
+  display: flex;
+  min-height: 100px;
+  margin: auto;
+  width: 210px;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 7px;
+  padding-bottom: 25px; }
+  .formularioLogin .fa {
+    display: flex;
+    justify-content: flex-end; }
+  .formularioLogin h2 {
+    position: relative;
+    padding-bottom: 5px;
+    left: 12px; }
+  .formularioLogin input {
+    height: 20px;
+    width: 180px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 1px; }
+  .formularioLogin .botonLogin {
+    width: 183px;
+    outline: none; }
+
+body {
+  width: 100%;
+  font-family: "Lato", sans-serif; }
+
+.principal {
+  width: 100%;
+  overflow: auto;
+  background-image: linear-gradient(-20deg, #8ddad5 0, #00cdac 100%);
+  /*formulario login*/ }
+  .principal h1 {
+    color: white;
+    font-size: 45px;
+    position: relative;
+    top: 75px;
+    left: 30px; }
+  .principal img {
+    width: 265px;
+    float: right; }
+  .principal .botones {
+    position: relative;
+    top: 150px;
+    left: 100px; }
+    .principal .botones input {
+      border: 1px solid grey;
+      font-size: 18px;
+      font-family: Arial, Verdana;
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      background: #4972B5;
+      background: linear-gradient(left, #4972B5, #618ACB);
+      background: -moz-linear-gradient(left, #4972B5, #618ACB);
+      background: -webkit-linear-gradient(left, #4972B5, #618ACB);
+      background: -o-linear-gradient(left, #4972B5, #618ACB);
+      color: #FFFFFF;
+      text-align: center; }
+      .principal .botones input:hover {
+        background: #365D9D;
+        background: linear-gradient(left, #365D9D, #436CAD);
+        background: -moz-linear-gradient(left, #365D9D, #436CAD);
+        background: -webkit-linear-gradient(left, #365D9D, #436CAD);
+        background: -o-linear-gradient(left, #365D9D, #436CAD);
+        color: #FFFFFF;
+        border-color: #FBFFAD; }
+  .principal .formularioLogin {
+    /*display: none;*/
+    position: relative;
+    z-index: 1;
+    left: 165px; }
+
+.cursos {
+  flex-wrap: wrap;
+  margin: 10px;
+  display: flex;
+  color: white;
+  padding-top: 45px; }
+  .cursos h1 {
+    color: white;
+    font-size: 45px;
+    position: relative;
+    color: black;
+    position: absolute;
+    top: 385px;
+    left: 35px; }
+  .cursos .rectangulo1, .cursos .rectangulo2, .cursos .rectangulo3 {
+    width: 140px;
+    /*height:$size2;*/
+    text-align: center;
+    background-color: #7cbf00;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    flex-direction: row;
+    margin: 10px; }
+    .cursos .rectangulo1 h2, .cursos .rectangulo2 h2, .cursos .rectangulo3 h2 {
+      font-size: 15px;
+      padding: 15px; }
+    .cursos .rectangulo1 p, .cursos .rectangulo2 p, .cursos .rectangulo3 p {
+      font-size: 15px; }
+    .cursos .rectangulo1 .imagenRectangulo, .cursos .rectangulo2 .imagenRectangulo, .cursos .rectangulo3 .imagenRectangulo {
+      margin-top: 10px; }
+    .cursos .rectangulo1:hover, .cursos .rectangulo2:hover, .cursos .rectangulo3:hover {
+      padding-bottom: 20px;
+      transition: 2s; }
+  .cursos .rectangulo2 {
+    width: 140px;
+    /*height:$size2;*/
+    text-align: center;
+    background-color: #b8e1fc;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    flex-direction: row;
+    margin: 10px; }
+  .cursos .rectangulo3 {
+    width: 140px;
+    /*height:$size2;*/
+    text-align: center;
+    background-color: #f9c667;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    flex-direction: row;
+    margin: 10px; }
+
+.formulario {
+  background-color: #f2eeee;
+  height: 50px;
+  width: 500px;
+  margin-left: 200px;
+  margin-top: -31px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 1px 3px 3px #aaa;
+  padding: 9px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+  .formulario .seleccion {
+    height: 30px; }
+  .formulario .buscar {
+    border: solid 1px black;
+    border-radius: 6px;
+    width: 90px;
+    height: 30px;
+    outline: none; }
+
+.carrera {
+  background-color: #f1eaea; }
+  .carrera h1 {
+    color: white;
+    font-size: 45px;
+    position: relative;
+    color: black;
+    left: 5%; }
+  .carrera .imagenesProfes {
+    width: 450px;
+    display: inline-block;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 7%; }
+    .carrera .imagenesProfes .profe1 {
+      float: left;
+      text-align: center; }
+      .carrera .imagenesProfes .profe1 img {
+        width: 150px; }
+      .carrera .imagenesProfes .profe1 h4 {
+        font-size: 18px; }
+    .carrera .imagenesProfes .profe2 {
+      text-align: center; }
+      .carrera .imagenesProfes .profe2 img {
+        width: 150px; }
+      .carrera .imagenesProfes .profe2 h4 {
+        font-size: 18px; }
+  .carrera .profesores {
+    width: 450px;
+    position: relative;
+    display: inline-block;
+    top: -77px; }
+    .carrera .profesores h3 {
+      color: white;
+      font-size: 45px;
+      position: relative;
+      font-size: 25px;
+      color: black; }
+    .carrera .profesores p {
+      margin-top: 20px;
+      margin-bottom: 20px; }
 
 /*# sourceMappingURL=estilo.css.map */

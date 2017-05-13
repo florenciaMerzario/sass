@@ -1,0 +1,44 @@
+
+
+
+.formularioLogin 
+
+		{
+			background-color: #DEDEDE;
+			display: flex;
+			min-height: 100px;
+			margin: auto;
+			width: 210px;
+			flex-direction:  column; 
+			padding: 10px;
+			border-radius: 7px;
+			padding-bottom: 25px;
+
+			.fa{
+
+				display: flex;
+				justify-content: flex-end;
+				}
+
+			h2{
+				position: relative;
+				padding-bottom: 5px;
+				left: 12px;
+			}	
+			input
+			{
+				height: 20px;
+				width: 180px;
+				margin-top: 5px;
+				margin-left: 10px;
+				border-radius: 1px;
+
+			}
+			.botonLogin{
+				width: 183px;
+				outline: none;
+
+			}
+			
+		}
+

@@ -1,3 +1,175 @@
-h1{
-	color:red;
+
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+@import "_menuNavegacion.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "_formLogin.scss";
+
+body{
+	width:100%;
+	font-family: $fontFamily;
+	
+}
+
+
+
+
+
+.principal{
+	h1 {
+		@include h1();
+		top:75px;
+		left:30px;
+		}
+	width:100%;
+	overflow:auto;
+	background-image: linear-gradient(-20deg,#8ddad5 0,#00cdac 100%);
+		img{
+			width:265px;
+			float:right;
+		}
+		
+		.botones{
+				position:relative;
+				top:150px;
+				left:100px;
+				input
+				{
+					@include botonEstilo();
+
+				&:hover{
+					@include efectoSombra();
+					}		
+				}
+			}
+/*formulario login*/
+		.formularioLogin{
+			/*display: none;*/
+			position: relative;
+			z-index: 1;
+			left:165px;
+		}
+}
+
+.cursos{
+	flex-wrap:wrap;
+	margin:10px;
+	display:flex;
+	color:white;
+	padding-top:45px;
+	 h1{
+	 	@include h1();
+		color:black;
+		position:absolute;
+		top:385px;
+		left:35px;
+
+	}
+	.rectangulo1{
+			@include rectangulo(140px, $colorVerde);
+			
+		h2{
+				font-size:15px;
+				padding:15px;
+			}		
+	
+			p{
+				font-size:15px;
+			}	
+			.imagenRectangulo{
+				margin-top:10px;
+			}
+			&:hover{
+				padding-bottom:20px;
+				transition:2s;
+			}
+			
+	}
+
+
+	.rectangulo2{
+			@extend .rectangulo1;
+			@include rectangulo(140px, $colorCeleste);
+			
+	}
+	.rectangulo3{
+			@extend .rectangulo1;
+			@include rectangulo(140px, $colorAmarillo);
+			
+	}
+}
+
+.formulario{
+	@include formularioBase();
+
+	.seleccion{
+		height: 30px;
+	}
+	.buscar{
+			 border: solid 1px black;
+   			 border-radius: 6px;
+   			 width: 90px;
+   			 height:30px;
+   			 outline:none;
+		}
+}
+
+.carrera{
+	background-color:#f1eaea;;
+	h1{
+		@include h1();
+		color:black;
+		left:5%;
+	}
+	.imagenesProfes{
+	    width: 450px;
+	    display: inline-block;
+	    position: relative;
+	    margin-top: 3%;
+	    margin-left: 7%;
+
+		
+		.profe1{
+			float: left;
+			text-align: center;
+			img{
+			width: 150px;
+			}
+			h4{
+				font-size: 18px;
+			}
+		}
+		.profe2{
+			text-align: center;
+			img{
+			width: 150px;
+
+			}
+			h4{
+				font-size: 18px;
+			}
+		}
+		
+	}
+	.profesores{
+		width: 450px;
+		position: relative;
+		display: inline-block;
+		top:-77px;
+
+		h3{
+			@include h1();
+				font-size: 25px;
+				color:black;
+			
+		}
+		p{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+
+
 }

@@ -1,0 +1,81 @@
+@mixin bordeRojo($ancho, $color){
+	border:$color dashed $ancho;
+}
+
+@mixin rectangulo($size1, $color){
+	width:$size1;
+	/*height:$size2;*/
+	text-align:center;
+	background-color:$color;
+	margin-left:20px;
+	box-sizing:border-box;
+	padding-top:20px;
+	flex-direction:row;
+	margin:10px;
+	
+}
+
+@mixin botonEstilo{
+	border:1px solid grey;
+	font-size:18px;
+	font-family: Arial, Verdana;
+	padding-left:7px;
+	padding-right: 7px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	background: #4972B5;
+	background: linear-gradient(left, #4972B5, #618ACB);
+	background: -moz-linear-gradient(left, #4972B5, #618ACB);
+	background: -webkit-linear-gradient(left, #4972B5, #618ACB);
+	background: -o-linear-gradient(left, #4972B5, #618ACB);
+	color: #FFFFFF;
+	text-align: center;
+
+
+  }
+
+@mixin efectoSombra{
+
+		
+		  background: #365D9D;
+		  background: linear-gradient(left, #365D9D, #436CAD);
+		  background: -moz-linear-gradient(left, #365D9D, #436CAD);
+		  background: -webkit-linear-gradient(left, #365D9D, #436CAD);
+		  background: -o-linear-gradient(left, #365D9D, #436CAD);
+		  color: #FFFFFF;
+		  border-color: #FBFFAD;
+}
+
+@mixin sombraRectangulo{
+			box-shadow: 10px 3px 1px grey;
+}
+
+@mixin formularioBase{
+	background-color:#f2eeee;
+	height: 50px;
+	width:500px;
+	margin-left:200px;
+	margin-top:-31px;
+	position:relative;
+	z-index:1;
+	box-shadow: 1px 3px 3px #aaa;
+	padding: 9px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+@mixin h1{
+			color:white;
+			font-size: $fuenteBase ;
+			position:relative;
+			
+}
+
+@mixin efectoBarraNavegacion{
+	opacity:1;
+	transform: translateY(0%);
+}
